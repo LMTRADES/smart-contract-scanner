@@ -622,7 +622,6 @@ class TestIntegration(unittest.TestCase):
         # Count listed patterns (lines that contain SWC ID format)
         import re
         swc_lines = re.findall(r'SWC-\d+', output)
-        # Each appears twice (header and data), so unique count / 1
         unique = set(swc_lines)
         self.assertGreaterEqual(len(unique), 15)
         self.assertEqual(result, 0)
